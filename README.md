@@ -1,2 +1,4 @@
-# license-repo-example
-An example repository for licenses. Clone this repo to create a license repo.
+# $license_name
+$license description goes here
+
+View at https://reusablelicensecollaboration.github.io/license-repo-example.
