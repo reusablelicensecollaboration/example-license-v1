@@ -11,6 +11,7 @@ body {
 	font-size: 16px;
     color: #000000;
     font-family: sans-serif;
+    margin: 0px;
 }
 h1 {
 	color: #111111;
@@ -72,10 +73,114 @@ li {
 	background-color: #CCCCCC;
 	padding: 10px;
 }
+#content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	max-width: 80%;
+	min-width: 80%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+
+
+
+
+.header1 {
+	background-color: #000000;
+	min-width: 100%;
+	max-width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#logo1 {
+	padding: 10px;
+	margin-left: 10%;
+	font-size: 26px;
+	background-color: #1D0A51;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#logo1:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#logo1:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#logo1:hover {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+#logo1:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home {
+	padding: 5px;
+	margin-left: 10px;
+	font-size: 18px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_home:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home:hover {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+#link_home:active {
+  color: #FFFFFF;
+  text-decoration: none;
+} 
 </style>
 </head>
 <body>
+<script src="https://reusablelicensecollaboration.github.io/assets/page-v1.js"></script>
+<script>
+document.body.onload = create_page_elements;
 
+function create_page_elements () {
+	//Create the header1
+	const header1 = document.createElement("div");
+	//Add class
+	header1.className = "header1";
+	//Add ID
+	header1.id = 'header1'
+	//Add header1 to DOM
+	const selected_element = document.getElementById("content");
+	document.body.insertBefore(header1, selected_element);
+	
+	//Create logo1
+	const logo1 = document.createElement("a");
+	logo1.setAttribute('href', '/');
+	logo1.innerHTML = 'R.L.C.';
+	//Add ID
+	logo1.id = "logo1";
+	//Add logo1 to DOM
+	document.getElementById('header1').appendChild(logo1);
+	
+	//Create link_home
+	const link_home = document.createElement("a");
+	link_home.setAttribute('href', '/');
+	link_home.innerHTML = 'Home';
+	//Add ID
+	link_home.id = "link_home";
+	//Add link_home to DOM
+	document.getElementById('header1').appendChild(link_home);
+}
+</script>
+<div id='content'>
 <h1>$license_name</h1>
 <h2>Overview</h2>
 
@@ -111,6 +216,6 @@ li {
 <p class='document'>$license_text</p>
 
 <span class='download_button'>Download</span>
-
+</div>
 </body>
 </html>
