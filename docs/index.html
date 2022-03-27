@@ -13,7 +13,7 @@
 <body>
 <script>
 //Set the path to the license file. This is used to copy the text into this webpage, and to create a download link.
-window.license_file_path = '/uploads/Example License v1.txt';
+window.license_file_path = '/license-repo-example/uploads/Example License v1.txt';
 </script>
 
 <script src="/assets/page-v1.js"></script>
@@ -78,7 +78,10 @@ file_contents.send();
 <h2>Document</h2>
 <p class='document' id='document1'>The text for this license is either unavailable, has been intentionally excluded, or failed to load. Check that your browser has Javascript enabled.</p>
 
-<span class='download_button'>Download</span>
+<a class='download_button' href="license.txt" download="license.txt">Download</a> 
+<script>
+document.getElementById("download_button").href = window.license_file_path
+</script>
 </div>
 </body>
 </html>
