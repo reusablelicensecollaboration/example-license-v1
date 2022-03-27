@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<!-- Remember, this repository is for a specific version of a license. -->
+<!-- Remember, each license repository is for a specific version of a license. -->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$license_name</title>
 <link rel="stylesheet" href="https://reusablelicensecollaboration.github.io/assets/entry-v1.css">
+<link rel="stylesheet" href="https://reusablelicensecollaboration.github.io/assets/page-v1.css">
 <style>
 body {
 	font-size: 16px;
@@ -26,6 +27,10 @@ h3 {
     font-size: 16px;
     font-weight: 600;
 }
+ul {
+	margin: 0px;
+	padding: 0px;
+}
 dd {
 	display: inline;
     margin: 0px;
@@ -36,14 +41,36 @@ dt {
 .features_true {
 	display: inline-block;
     padding: 10px;
-    background-color: green;
-    margin-left: 5px;
+    background-color: #50d550;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0c8a1a;
 }
 .features_false {
 	display: inline-block;
     padding: 10px;
-    background-color: red;
-    margin-left: 5px;
+    background-color: #e18484;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ca1a1a;
+}
+li {
+	margin-bottom: 5px;
+}
+.document {
+	background-color: #F0E4C8;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+.download_button {
+	display: inline-block;
+	background-color: #CCCCCC;
+	padding: 10px;
 }
 </style>
 </head>
@@ -72,13 +99,18 @@ dt {
 
 <h3>Features</h3>
 <ul>
-<li class='features_true'>$feature</li>
+<li class='features_true'>Disclaimer</li>
+<li class='features_true'>Modify</li>
+<li class='features_true'>Share</li>
+<li class='features_false'>Attribution</li>
+<li class='features_false'>Notice Retention</li>
+<li class='features_true'>License Retention</li>
 </ul>
 
 <h2>Document</h2>
-<p>$license_text</p>
+<p class='document'>$license_text</p>
 
-<span>Download</span>
+<span class='download_button'>Download</span>
 
 </body>
 </html>
