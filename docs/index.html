@@ -7,254 +7,28 @@
 <link rel="stylesheet" href="/assets/entry-v1.css">
 <link rel="stylesheet" href="/assets/page-v1.css">
 <style>
-body {
-	font-size: 16px;
-    color: #000000;
-    font-family: sans-serif;
-    margin: 0px;
-}
-h1 {
-	color: #111111;
-    font-size: 32px;
-    font-weight: 200;
-}
-h2 {
-	color: #8a7474;
-    font-size: 20px;
-    font-weight: 900;
-}
-h3 {
-	color: #333333;
-    font-size: 16px;
-    font-weight: 600;
-}
-ul {
-	margin: 0px;
-	padding: 0px;
-}
-dd {
-	display: inline;
-    margin: 0px;
-}
-dt {
-	display: inline;
-}
-.type_true {
-	display: inline-block;
-    padding: 10px;
-    background-color: #b7b7b7;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #717171;
-}
-.type_false {
-	display: inline-block;
-    padding: 10px;
-    background-color: #e6e6e6;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #cecece;
-}
-.features_true {
-	display: inline-block;
-    padding: 10px;
-    background-color: #50d550;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #0c8a1a;
-}
-.features_false {
-	display: inline-block;
-    padding: 10px;
-    background-color: #e18484;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #ca1a1a;
-}
-.permissions_true {
-	display: inline-block;
-    padding: 10px;
-    background-color: #50d550;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #0c8a1a;
-}
-.permissions_false {
-	display: inline-block;
-    padding: 10px;
-    background-color: #e18484;
-    margin-right: 5px;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #ca1a1a;
-}
-li {
-	margin-bottom: 5px;
-}
-.document {
-	background-color: #F0E4C8;
-	margin: 5px;
-	margin-bottom: 15px;
-	padding: 10px;
-}
-.download_button {
-	display: inline-block;
-	background-color: #CCCCCC;
-	padding: 10px;
-}
-#content {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	max-width: 80%;
-	min-width: 80%;
-	padding-bottom: 10px;
-	padding-top: 10px;
-}
 
-
-
-
-
-.header1 {
-	background-color: #000000;
-	min-width: 100%;
-	max-width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-#logo1 {
-	padding: 10px;
-	margin-left: 10%;
-	font-size: 26px;
-	background-color: #1D0A51;
-	display: inline-block;
-	font-family: sans-serif;
-}
-#logo1:link {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#logo1:visited {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#logo1:hover {
-  color: #FFFFFF;
-  text-decoration: none;
-	background-color: #2E069B;
-}
-#logo1:active {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_home {
-	padding: 5px;
-	margin-left: 20px;
-	margin-bottom: 10px;
-	font-size: 18px;
-	vertical-align: middle;
-	display: inline-block;
-	font-family: sans-serif;
-}
-#link_home:link {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_home:visited {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_home:hover {
-  color: #EEEEEE;
-  text-decoration: none;
-}
-#link_home:active {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_about_us {
-	padding: 5px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	font-size: 18px;
-	vertical-align: middle;
-	display: inline-block;
-	font-family: sans-serif;
-}
-#link_about_us:link {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_about_us:visited {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#link_about_us:hover {
-  color: #EEEEEE;
-  text-decoration: none;
-}
-#link_about_us:active {
-  color: #FFFFFF;
-  text-decoration: none;
-} 
 </style>
 </head>
 <body>
+<script>
+//Set the path to the license file. This is used to copy the text into this webpage, and to create a download link.
+window.license_file_path = '/uploads/Example License v1.txt';
+</script>
+
 <script src="/assets/page-v1.js"></script>
 <script>
-document.body.onload = create_page_elements;
 
-function create_page_elements () {
-	//Create the header1
-	const header1 = document.createElement("div");
-	//Add class
-	header1.className = "header1";
-	//Add ID
-	header1.id = 'header1'
-	//Add header1 to DOM
-	const selected_element = document.getElementById("content");
-	document.body.insertBefore(header1, selected_element);
-	
-	//Create logo1
-	const logo1 = document.createElement("a");
-	logo1.setAttribute('href', '/');
-	logo1.innerHTML = 'R.L.C.';
-	//Add ID
-	logo1.id = "logo1";
-	//Add logo1 to DOM
-	document.getElementById('header1').appendChild(logo1);
-	
-	//Create link_home
-	const link_home = document.createElement("a");
-	link_home.setAttribute('href', '/');
-	link_home.innerHTML = 'Browse';
-	//Add ID
-	link_home.id = "link_home";
-	//Add link_home to DOM
-	document.getElementById('header1').appendChild(link_home);
+</script>
 
-	//Create link_about_us
-	const link_about_us = document.createElement("a");
-	link_about_us.setAttribute('href', '/pages/about-us.html');
-	link_about_us.innerHTML = 'About Us';
-	//Add ID
-	link_about_us.id = "link_about_us";
-	//Add link_about_us to DOM
-	document.getElementById('header1').appendChild(link_about_us);
+<script>
+var file_contents = new XMLHttpRequest();
+file_contents.onload = function(){
+    document.getElementById("document1").innerHTML = this.responseText;
 }
+file_contents.open("GET", window.license_file_path, true);
+file_contents.responseType = 'text';
+file_contents.send();
 </script>
 <div id='content'>
 <h1>$license_name</h1>
@@ -302,7 +76,7 @@ function create_page_elements () {
 </ul>
 
 <h2>Document</h2>
-<p class='document'>$license_text</p>
+<p class='document' id='document1'>The text for this license is either unavailable, has been intentionally excluded, or failed to load. Check that your browser has Javascript enabled.</p>
 
 <span class='download_button'>Download</span>
 </div>
