@@ -4,8 +4,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$license_name</title>
-<link rel="stylesheet" href="https://reusablelicensecollaboration.github.io/assets/entry-v1.css">
-<link rel="stylesheet" href="https://reusablelicensecollaboration.github.io/assets/page-v1.css">
+<link rel="stylesheet" href="/assets/entry-v1.css">
+<link rel="stylesheet" href="/assets/page-v1.css">
 <style>
 body {
 	font-size: 16px;
@@ -39,6 +39,26 @@ dd {
 dt {
 	display: inline;
 }
+.type_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: #b7b7b7;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #717171;
+}
+.type_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: #e6e6e6;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #cecece;
+}
 .features_true {
 	display: inline-block;
     padding: 10px;
@@ -50,6 +70,26 @@ dt {
 	border-color: #0c8a1a;
 }
 .features_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: #e18484;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ca1a1a;
+}
+.permissions_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: #50d550;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0c8a1a;
+}
+.permissions_false {
 	display: inline-block;
     padding: 10px;
     background-color: #e18484;
@@ -112,8 +152,9 @@ li {
   text-decoration: none;
 }
 #logo1:hover {
-  color: #EEEEEE;
+  color: #FFFFFF;
   text-decoration: none;
+	background-color: #2E069B;
 }
 #logo1:active {
   color: #FFFFFF;
@@ -121,7 +162,8 @@ li {
 }
 #link_home {
 	padding: 5px;
-	margin-left: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
 	font-size: 18px;
 	vertical-align: middle;
 	display: inline-block;
@@ -142,11 +184,36 @@ li {
 #link_home:active {
   color: #FFFFFF;
   text-decoration: none;
+}
+#link_about_us {
+	padding: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_about_us:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_about_us:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_about_us:hover {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+#link_about_us:active {
+  color: #FFFFFF;
+  text-decoration: none;
 } 
 </style>
 </head>
 <body>
-<script src="https://reusablelicensecollaboration.github.io/assets/page-v1.js"></script>
+<script src="/assets/page-v1.js"></script>
 <script>
 document.body.onload = create_page_elements;
 
@@ -173,11 +240,20 @@ function create_page_elements () {
 	//Create link_home
 	const link_home = document.createElement("a");
 	link_home.setAttribute('href', '/');
-	link_home.innerHTML = 'Home';
+	link_home.innerHTML = 'Browse';
 	//Add ID
 	link_home.id = "link_home";
 	//Add link_home to DOM
 	document.getElementById('header1').appendChild(link_home);
+
+	//Create link_about_us
+	const link_about_us = document.createElement("a");
+	link_about_us.setAttribute('href', '/pages/about-us.html');
+	link_about_us.innerHTML = 'About Us';
+	//Add ID
+	link_about_us.id = "link_about_us";
+	//Add link_about_us to DOM
+	document.getElementById('header1').appendChild(link_about_us);
 }
 </script>
 <div id='content'>
@@ -202,14 +278,27 @@ function create_page_elements () {
 <p itemprop="description">$license_description</p>
 </div>
 
+<h3>Type</h3>
+<ul>
+<!-- Valid types are: Public Domain Dedication, Permissive License, Reciprocal License (aka Copyleft, ShareALike), Opensource License, "Ethical" License, Source Available License (aka Read-only License, Verbatim License), Free Software License, Crayon License. A License may meet the criteria of multiple types.-->
+<li class='type_true'>Permissive License</li>
+<li class='type_true'>Free Software License</li>
+<li class='type_true'>Crayon License</li>
+</ul>
+
 <h3>Features</h3>
 <ul>
 <li class='features_true'>Disclaimer</li>
-<li class='features_true'>Modify</li>
-<li class='features_true'>Share</li>
 <li class='features_false'>Attribution</li>
-<li class='features_false'>Notice Retention</li>
-<li class='features_true'>License Retention</li>
+<li class='features_false'>Copyright Notice Retention</li>
+<li class='features_true'>License Text Retention</li>
+</ul>
+
+<h3>Permissions</h3>
+<ul>
+<li class='permissions_true'>Copy</li>
+<li class='permissions_false'>Modify</li>
+<li class='permissions_true'>Share</li>
 </ul>
 
 <h2>Document</h2>
