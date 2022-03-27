@@ -4,23 +4,78 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$license_name</title>
+<link rel="stylesheet" href="https://reusablelicensecollaboration.github.io/assets/entry-v1.css">
+<style>
+body {
+	font-size: 16px;
+    color: #000000;
+    font-family: sans-serif;
+}
+h1 {
+	color: #111111;
+    font-size: 32px;
+    font-weight: 200;
+}
+h2 {
+	color: #8a7474;
+    font-size: 20px;
+    font-weight: 900;
+}
+h3 {
+	color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+}
+dd {
+	display: inline;
+    margin: 0px;
+}
+dt {
+	display: inline;
+}
+.features_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: green;
+    margin-left: 5px;
+}
+.features_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: red;
+    margin-left: 5px;
+}
+</style>
 </head>
 <body>
-<h1>$license_name</h1>
 
+<h1>$license_name</h1>
 <h2>Overview</h2>
-<ul>
-<li>Authors: </li>
-<li>Official Source: </li>
-</ul>
-<p>$license_name description</p>
+
+<div itemscope itemtype="https://schema.org/CreativeWork">
+<dl>
+<dt>Name:</dt>
+<dd itemprop="name">$license_name</dd>
+<div class='break'></div>
+<dt>Authors:</dt>
+<dd itemprop="author">$authors</dd>
+<div class='break'></div>
+<dt>Publication Date:</dt> 
+<dd><meta itemprop="datePublished" content="2022-03-26">March 26, 2022</dd>
+<div class='break'></div>
+<dt>Official Source:</dt>
+<dd><a href="$url" itemprop="url">$url</a></dd>
+<div class='break'></div>
+</dl>
+<p itemprop="description">$license_description</p>
+</div>
 
 <h3>Features</h3>
 <ul>
-<li>Feature 1</li>
+<li class='features_true'>$feature</li>
 </ul>
 
-<h2>License Text</h2>
+<h2>Document</h2>
 <p>$license_text</p>
 
 <span>Download</span>
