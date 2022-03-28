@@ -1,4 +1,4 @@
-# $license_name
-$license description goes here
+# Example License v1
+This is not a license. It is an example repo for licenses.
 
 View at https://reusablelicensecollaboration.github.io/license-repo-example.
