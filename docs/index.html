@@ -86,6 +86,44 @@ document.getElementById("download_button").href = window.license_file_path
 <ul>
 <li class='related_articles_list'><a class='default_links' href="/posts/types-of-licenses.html">Types of Licenses</a> - R.L.C.</li>
 </ul>
+
+<h2 class='soft_h2' id='meta_header'>Meta (about this page)</h2>
+<input type="text" id="inline_clipboard" value="">
+<ul>
+<li class='meta_list'>Published March 26, 2022. Last updated May 14, 2022.</li>
+<li class='meta_list'>Contributers: James Daniel Marrs Ritchey.</li>
+<li class='meta_list'>Citations: 
+	 <ul class='meta_sub_list'>
+      <li>APA: 
+      <div class="citations_in_text">In Text: <div class="selectable_text" onclick="select_text_v1(this)" id="apa_in_text"></div></div>
+      <div class="citations_references">References: <div class="selectable_text" onclick="select_text_v1(this)" id="apa_references"></div></div>
+      </li>
+      <li>Custom: 
+      <div class="citations_in_text">In Text: <div class="selectable_text" onclick="select_text_v1(this)" id="custom_in_text"></div></div>
+      <div class="citations_references">References: <div class="selectable_text" onclick="select_text_v1(this)" id="custom_references"></div></div>
+      </li>
+    </ul>
+    <script>
+	document.getElementById("apa_in_text").innerHTML = '(Ritchey, 2022)';
+	document.getElementById("apa_references").innerHTML = 'Ritchey, J. (2022). Example License v1. https://' + window.location.hostname + '/example-license-v1.';
+	document.getElementById("custom_in_text").innerHTML = '(https://' + window.location.hostname + '/example-license-v1)';
+	document.getElementById("custom_references").innerHTML = 'R.L.C. - Example License v1 (https://' + window.location.hostname + '/example-license-v1).';
+	function select_text_v1(element) {
+		document.getElementById('inline_clipboard').value = element.innerHTML;
+		var selectable_text = document.getElementsByClassName('selectable_text');
+		for (var i = 0; i < selectable_text.length; i++) {
+			selectable_text[i].style.backgroundColor = '#EEEEEE';
+			selectable_text[i].style.color = 'unset';
+		}
+		element.style.backgroundColor = 'rgb(48, 73, 204)';
+		element.style.color = '#EEEEEE';
+ 		var inline_clipboard = document.getElementById('inline_clipboard');
+ 		inline_clipboard.select();
+ 		navigator.clipboard.writeText(inline_clipboard.value);
+	}
+	</script>
+</li>
+</ul>
     
 </div>
 </body>
