@@ -87,9 +87,23 @@ document.getElementById("download_button").href = window.license_file_path
 <li class='related_articles_list'><a class='default_links' href="/posts/types-of-licenses.html">Types of Licenses</a> - R.L.C.</li>
 </ul>
 
-<h2 class='soft_h2' id='meta_header'>Meta (about this page)</h2>
+<h2 class='h2_soft' id='meta_header' onclick="show_hide_meta()">&and; Meta (about this page)</h2>
+<script>
+function show_hide_meta() {	
+	var check = document.getElementById("meta_content").style.display;
+	if (check !== 'none') {
+		document.getElementById("meta_content").style.display = 'none';
+		document.getElementById("meta_header").innerHTML = '&and; Meta (about this page)';
+		document.getElementById("meta_header").classList.toggle("h2_soft");
+	} else {
+		document.getElementById("meta_content").style.display = 'unset';
+		document.getElementById("meta_header").innerHTML = '&or; Meta (about this page)';
+		document.getElementById("meta_header").classList.remove('h2_soft');
+	}
+}
+</script>
 <input type="text" id="inline_clipboard" value="">
-<ul>
+<ul id='meta_content' style='display:none'>
 <li class='meta_list'>Published March 26, 2022. Last updated May 14, 2022.</li>
 <li class='meta_list'>Contributers: James Daniel Marrs Ritchey.</li>
 <li class='meta_list'>Citations: 
@@ -124,7 +138,6 @@ document.getElementById("download_button").href = window.license_file_path
 	</script>
 </li>
 </ul>
-    
 </div>
 </body>
 </html>
